@@ -1,4 +1,5 @@
-import Home from "./pages/Home";
+import AboutUsSection from "./components/AboutUsSection";
+// import Home from "./pages/Home";
 
 function App() {
   return (
@@ -16,9 +17,24 @@ function App() {
         </p>
       </div> */}
 
-      <div className="relative">
+      {/* <div className="relative">
         <Home />
-      </div>
+      </div> */}
+
+
+      <div className=" h-screen">
+      {/* <Header transparent={true} />
+      <HeroSection /> */}
+      <AboutUsSection />
+      {/* <WhatWeProvide />
+      <Testimonials />
+      <TopDestinations />
+      <Faq /> */}
+      {/* <TopBlogs /> */}
+      {/* <Feature />
+      <ContactUs />
+      <Footer /> */}
+    </div>
     </>
   );
 }
