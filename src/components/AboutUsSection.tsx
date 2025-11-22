@@ -35,7 +35,7 @@ const AboutUsSection: React.FC = () => {
   };
 
   return (
-    <div className=" grid grid-cols-12 gap-[60px] max-md:gap-[30px_0] items-center p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
+    <div className=" grid grid-cols-12 gap-[60px] max-md:gap-[30px_0] items-center ">
       <motion.div
         className="col-span-6 max-md:col-span-full"
         variants={rightItem}
@@ -44,11 +44,7 @@ const AboutUsSection: React.FC = () => {
         viewport={{ once: true, amount: 0.5 }}
       >
         {/* Put an <img> here when you have the asset in Vite, e.g.: */}
-        <img
-          src="/images/newsletter.png"
-          alt="AboutHomeImg"
-          className="w-full"
-        />
+        <img src="/images/Shop-list-img11.png" alt="AboutHomeImg" className="w-full" />
       </motion.div>
 
       <motion.div
@@ -69,10 +65,10 @@ const AboutUsSection: React.FC = () => {
           className="text-[18px] max-2xl:text-[16px] max-md:text-[14px]"
           variants={leftItem}
         >
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem
-          dolores.
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book
         </motion.p>
         <motion.div className="mt-[20px] max-md:mt-[15px]" variants={leftItem}>
           <form
@@ -99,12 +95,12 @@ const AboutUsSection: React.FC = () => {
                 mt-3 md:mt-0
                 cursor-pointer
                 md:w-[180px]
-                bg-[#e06a23]
+                bg-[#8D4819]
                 text-white
                 font-heading uppercase font-bold text-[14px] tracking-[0.15em]
                 px-6 md:px-8
                 py-3 md:py-4
-                hover:bg-[#c85b1a]
+                hover:bg-[#A75A22]
                 transition-colors
               "
             >

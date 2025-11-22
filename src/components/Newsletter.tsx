@@ -3,7 +3,7 @@ const Newsletter = () => {
     <section className=" grid grid-cols-12 gap-12">
       <div className="col-span-12 md:col-span-6">
         <img
-          src="/images/newsletter.png"
+          src="/images/Shop-list-img11.png"
           alt="Beekeeping newsletter"
           height={621}
           width={595}

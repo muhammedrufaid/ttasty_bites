@@ -1,4 +1,6 @@
 import AboutUsSection from "./components/AboutUsSection";
+import Footer from "./components/common/Footer";
+import ShopByBenefit from "./components/shopByBenefit";
 // import Home from "./pages/Home";
 
 function App() {
@@ -21,20 +23,32 @@ function App() {
         <Home />
       </div> */}
 
-
       <div className=" h-screen">
-      {/* <Header transparent={true} />
+        {/* <Header transparent={true} />
       <HeroSection /> */}
-      <AboutUsSection />
-      {/* <WhatWeProvide />
+
+      {/* our products */}
+      
+        <div className="bg-white">
+          <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
+            <ShopByBenefit />
+          </div>
+        </div>
+
+        {/* testimonials */}
+        <div className="p-[60px_120px] max-2xl:p-[0px_100px] max-md:p-[40px_20px]">
+          <AboutUsSection />
+        </div>
+        <Footer />
+        {/* <WhatWeProvide />
       <Testimonials />
       <TopDestinations />
       <Faq /> */}
-      {/* <TopBlogs /> */}
-      {/* <Feature />
+        {/* <TopBlogs /> */}
+        {/* <Feature />
       <ContactUs />
       <Footer /> */}
-    </div>
+      </div>
     </>
   );
 }

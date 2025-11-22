@@ -18,6 +18,7 @@ const Home = () => {
         <div className="flex-1 bg-red-200 h-64"></div>
         <div className="flex-1 bg-blue-200 h-64"></div>
       </div>
+      
     </div>
   );
 };
