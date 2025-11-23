@@ -95,12 +95,12 @@ const AboutUsSection: React.FC = () => {
                 mt-3 md:mt-0
                 cursor-pointer
                 md:w-[180px]
-                bg-[#8D4819]
+                bg-[#F9C301]
                 text-white
                 font-heading uppercase font-bold text-[14px] tracking-[0.15em]
                 px-6 md:px-8
                 py-3 md:py-4
-                hover:bg-[#A75A22]
+                hover:bg-[#D7A801]
                 transition-colors
               "
             >

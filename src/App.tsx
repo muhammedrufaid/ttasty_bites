@@ -1,6 +1,7 @@
 import AboutUsSection from "./components/AboutUsSection";
 import Footer from "./components/common/Footer";
 import ShopByBenefit from "./components/shopByBenefit";
+import WhoWeAre from "./components/WhoWeAre";
 // import Home from "./pages/Home";
 
 function App() {
@@ -27,9 +28,12 @@ function App() {
         {/* <Header transparent={true} />
       <HeroSection /> */}
 
-      {/* our products */}
-      
-        <div className="bg-white">
+        {/* our products */}
+        <div>
+          <WhoWeAre />
+        </div>
+
+        <div className="bg-[#EBE8D4]">
           <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
             <ShopByBenefit />
           </div>

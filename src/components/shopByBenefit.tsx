@@ -38,7 +38,7 @@ const ShopByBenefit = () => {
     <div className="grid grid-cols-12 items-center justify-center ">
       <div className="col-span-12">
         <motion.h2
-          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading text-center "
+          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading text-center"
           variants={heading}
           initial="hidden"
           whileInView="visible"
@@ -62,7 +62,7 @@ const ShopByBenefit = () => {
               transition={{ duration: 0.2 }}
             >
               <div
-                className={`group flex justify-center items-center bg-[#FBB719] hover:bg-[#A75A22] w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
+                className={`group flex justify-center items-center bg-[#E1DCC6] hover:bg-[#A75A22] w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
               >
                 <img 
                   src={f?.icon} 

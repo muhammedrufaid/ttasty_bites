@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <motion.div
-        className="grid grid-cols-12 gap-[50px] max-md:gap-[20px_0] bg-[#8D4819] p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]"
+        className="grid grid-cols-12 gap-[50px] max-md:gap-[20px_0] bg-[#1F1801] p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
         </motion.div> */}
       </motion.div>
 
-      <div className="w-full bg-[#8D4819] flex justify-center items-center p-[20px] border-t border-[rgba(255,255,255,0.50)]">
+      <div className="w-full bg-[#1F1801] flex justify-center items-center p-[20px] border-t border-[rgba(255,255,255,0.50)]">
         <p className="text-[18px] max-2xl:text-[16px] max-md:text-[14px] text-white max-w-[400px]">
           2025 all rights reserved.
         </p>
