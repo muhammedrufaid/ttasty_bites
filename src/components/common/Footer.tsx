@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
 
   const whatsappLink =
-    "https://wa.me/+971562420393?text=Hello!%20I'd%20like%20to%20inquire%20about%20booking%20a%20travel%20package.%20Can%20you%20provide%20more%20information%20and%20assist%20me%20with%20the%20process?";
+    "https://wa.me/+919567329623?text=Hello%21%20I%27d%20like%20to%20inquire%20about%20your%20Honey%20Mixed%20Nuts%20%28Tasty%20Bites%29.%20Can%20you%20provide%20more%20information%20about%20the%20product%3F";
 
   return (
     <>
