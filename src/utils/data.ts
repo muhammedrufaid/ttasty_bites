@@ -7,6 +7,34 @@ import RespiratoryHealthIcon from '/public/images/shopByBenefit/respiratory-heal
 import SkinHealthIcon from '/public/images/shopByBenefit/skinhealth.png';
 
 
+export const testimonialsData = [
+  {
+    id: 1,
+    testimonial: "I've been using these products for months now, and the difference in my energy levels is remarkable. The natural ingredients give me sustained energy without any crashes.",
+    author: "Sarah Johnson"
+  },
+  {
+    id: 2,
+    testimonial: "The digestive health products have been a game-changer for me. I feel lighter and more comfortable after meals, and my digestion has never been better.",
+    author: "Michael Chen"
+  },
+  {
+    id: 3,
+    testimonial: "As someone who's always been health-conscious, I'm impressed by the quality and effectiveness of these products. My skin has never looked better!",
+    author: "Emily Rodriguez"
+  },
+  {
+    id: 4,
+    testimonial: "The respiratory health products helped me get through allergy season with much less discomfort. I can finally breathe easy again!",
+    author: "David Kim"
+  },
+  {
+    id: 5,
+    testimonial: "I was skeptical at first, but after trying the immunity boost products, I haven't been sick all winter. My whole family is using them now!",
+    author: "Lisa Thompson"
+  }
+];
+
 export const featuresData = [
   {
     id: 1,

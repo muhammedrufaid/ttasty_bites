@@ -1,6 +1,7 @@
 import AboutUsSection from "./components/AboutUsSection";
 import Footer from "./components/common/Footer";
 import ShopByBenefit from "./components/shopByBenefit";
+import Testimonials from "./components/Testimonials";
 import WhoWeAre from "./components/WhoWeAre";
 // import Home from "./pages/Home";
 
@@ -39,7 +40,17 @@ function App() {
           </div>
         </div>
 
+        <div>
+          <WhoWeAre />
+        </div>
+
         {/* testimonials */}
+          <div className="bg-[#EBE8D4]">
+          <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
+            <Testimonials />
+          </div>
+        </div>
+
         <div className="p-[60px_120px] max-2xl:p-[0px_100px] max-md:p-[40px_20px]">
           <AboutUsSection />
         </div>
