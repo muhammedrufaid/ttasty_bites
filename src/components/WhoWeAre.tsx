@@ -46,18 +46,15 @@ const WhoWeAre = () => {
           Who We Are?
         </motion.h2>
         <motion.p
-          className="text-[18px] max-2xl:text-[16px] max-md:text-[14px]"
+          className="mt-[10px] text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
           variants={leftItem}
         >
           Welcome to Tasty Bites, where nature’s finest ingredients meet pure,
           delicious craftsmanship. We believe that snacking should be wholesome,
-          flavorful, and made with real, honest ingredients. That’s why our
-          Honey Mixed Nuts are crafted using premium handpicked nuts, gently
-          coated with pure honey to create the perfect blend of crunch and
-          natural sweetness.
+          flavorful, and made with real, honest ingredients.
         </motion.p>
         <motion.p
-          className="text-[18px] max-2xl:text-[16px] max-md:text-[14px]"
+          className="text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
           variants={leftItem}
         >
           At Tasty Bites, quality is at the heart of everything we do. From

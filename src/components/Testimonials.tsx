@@ -63,7 +63,9 @@ const Testimonials = () => {
           Testimonials
         </motion.h2>
 
-        <div className="flex flex-col gap-20">
+        
+
+        {/* <div className="flex flex-col gap-20">
           {testimonialsData.slice(0, 3).map((testimonial, index) => (
             <motion.div
               key={index}
@@ -97,9 +99,9 @@ const Testimonials = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-        
-          {/* <div className="col-span-8 w-full">
+        </div> */}
+
+        {/* <div className="col-span-8 w-full">
             <Slider ref={sliderRef} {...settings}>
               {testimonialsData.map((item) => (
                 <motion.div
@@ -128,7 +130,7 @@ const Testimonials = () => {
               ))}
             </Slider>
           </div> */}
-          
+
         {/* <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}

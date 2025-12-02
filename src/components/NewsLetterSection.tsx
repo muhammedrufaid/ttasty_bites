@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutUsSection: React.FC = () => {
+const NewsLetterSection: React.FC = () => {
   const container = {
     hidden: { opacity: 0, y: 10 },
     visible: {
@@ -62,7 +62,7 @@ const AboutUsSection: React.FC = () => {
           Newsletter sign up
         </motion.h2>
         <motion.p
-          className="text-[18px] max-2xl:text-[16px] max-md:text-[14px]"
+          className="mt-[10px]  text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
           variants={leftItem}
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -113,4 +113,4 @@ const AboutUsSection: React.FC = () => {
   );
 };
 
-export default AboutUsSection;
+export default NewsLetterSection;
