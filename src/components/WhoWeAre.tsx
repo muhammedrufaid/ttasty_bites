@@ -31,22 +31,43 @@ const WhoWeAre = () => {
     },
   };
   return (
-    <div className="bg-[] grid grid-cols-12 gap-[60px] max-md:gap-[30px_0] items-center p-[60px_120px] max-2xl:p-[00px_100px] max-md:p-[40px_20px]">
+    <div className="relative grid grid-cols-12 gap-[60px] max-xl:gap-10 max-md:gap-[30px_0] items-center p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[100px_20px_40px]">
+        <div className="absolute top-0 left-0 z-10">
+          <img
+            src="/images/whowearetop.png"
+            alt="AboutHomeImg"
+            className="w-[300px] max-2xl:w-[200px] max-xl:w-[120px] rotate-y-180"
+          />
+        </div>
+        <div className="absolute bottom-[-60px] left-0 z-20">
+          <img
+            src="/images/honeydrop.png"
+            alt="AboutHomeImg"
+            className="w-[300px] max-2xl:w-[200px] max-xl:w-[140px] rotate-y-180"
+          />
+        </div>
+        <div className="absolute bottom-[-30px] right-0 z-20">
+          <img
+            src="/images/whowearebottom.png"
+            alt="AboutHomeImg"
+            className="w-[300px] max-2xl:w-[200px] max-xl:w-[140px]"
+          />
+        </div>
       <motion.div
-        className="col-span-6 max-md:col-span-full flex flex-col gap-[10px]"
+        className="relative z-30 col-span-6 max-md:col-span-full flex flex-col gap-2.5 max-lg:gap-1"
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2
-          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading"
+          className="font-heading uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] text-heading"
           variants={leftItem}
         >
           Who We Are?
         </motion.h2>
         <motion.p
-          className="mt-[10px] text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
+          className="text-[18px] max-2xl:text-[16px] max-md:text-[14px]"
           variants={leftItem}
         >
           Welcome to Tasty Bites, where nature’s finest ingredients meet pure,

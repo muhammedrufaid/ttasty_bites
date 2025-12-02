@@ -48,7 +48,7 @@ const NewsLetterSection: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="col-span-6 max-md:col-span-full flex flex-col gap-[10px]"
+        className="col-span-6 max-md:col-span-full flex flex-col gap-2.5"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -56,13 +56,13 @@ const NewsLetterSection: React.FC = () => {
       >
         <motion.h2
           //   className="text-[46px] max-2xl:text-[40px] max-md:text-[22px] text-white font-medium"
-          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading"
+          className="font-heading uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] text-heading"
           variants={leftItem}
         >
           Newsletter sign up
         </motion.h2>
         <motion.p
-          className="mt-[10px]  text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
+          className="mt-2.5  text-[18px] max-2xl:text-[16px] max-md:text-[14px] leading-[25px]"
           variants={leftItem}
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -70,7 +70,7 @@ const NewsLetterSection: React.FC = () => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book
         </motion.p>
-        <motion.div className="mt-[20px] max-md:mt-[15px]" variants={leftItem}>
+        <motion.div className="mt-5 max-md:mt-[15px]" variants={leftItem}>
           <form
             onSubmit={(e) => e.preventDefault()}
             className="flex flex-col md:flex-row w-full max-w-xl"
@@ -95,12 +95,12 @@ const NewsLetterSection: React.FC = () => {
                 mt-3 md:mt-0
                 cursor-pointer
                 md:w-[180px]
-                bg-[#F9C301]
+                bg-[#ffb643]
                 text-white
                 font-heading uppercase font-bold text-[14px] tracking-[0.15em]
                 px-6 md:px-8
                 py-3 md:py-4
-                hover:bg-[#D7A801]
+                hover:bg-[#e6a23c]
                 transition-colors
               "
             >

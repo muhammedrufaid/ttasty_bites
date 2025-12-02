@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 interface GalleryItem {
   id: number;
@@ -50,11 +51,11 @@ const heading = {
 
 const OurGallery = () => {
   return (
-    <>
-      <div className="grid grid-cols-12 items-center justify-center ">
+    <React.Fragment>
+      <div className="grid grid-cols-12 items-center justify-center p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[80px_20px_40px] gap-2">
         <div className="col-span-12">
           <motion.h2
-            className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading"
+            className="font-heading uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-5 max-lg:mb-2.5 text-heading"
             variants={heading}
             initial="hidden"
             whileInView="visible"
@@ -63,10 +64,10 @@ const OurGallery = () => {
             Our Gallery
           </motion.h2>
         </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
+       
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-10"> */}
         {galleryItems.map((item) => (
-          <div key={item.id} className="overflow-hidden">
+          <div key={item.id} className="overflow-hidden col-span-4 max-xl:col-span-6 max-md:col-span-12 aspect-12/8">
             <img
               src={item.imageUrl}
               alt={item.altText}
@@ -75,7 +76,7 @@ const OurGallery = () => {
           </div>
         ))}
       </div>
-    </>
+    </React.Fragment>
   );
 };
 export default OurGallery;

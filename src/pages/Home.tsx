@@ -5,23 +5,15 @@ import NewsLetterSection from "../components/NewsLetterSection";
 import Testimonials from "../components/Testimonials";
 import ShopByBenefit from "../components/shopByBenefit";
 import WhoWeAre from "../components/WhoWeAre";
+import React from "react";
 
 const Home = () => {
   return (
-    <>
-      <div>
-        <WhoWeAre />
-      </div>
+    <React.Fragment>
+      <WhoWeAre />
+      <ShopByBenefit />
+      <OurGallery />
 
-      <div className="bg-[#EBE8D4]">
-        <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
-          <ShopByBenefit />
-        </div>
-      </div>
-
-      <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
-        <OurGallery />
-      </div>
 
       <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
         <OurProducts />
@@ -36,7 +28,7 @@ const Home = () => {
         <NewsLetterSection />
       </div>
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 

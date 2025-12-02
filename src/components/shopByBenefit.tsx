@@ -35,10 +35,18 @@ const ShopByBenefit = () => {
   //     },
   //   };
   return (
-    <div className="grid grid-cols-12 items-center justify-center ">
-      <div className="col-span-12">
+    <div className="relative bg-[#EBE8D4] grid grid-cols-12 items-center justify-center p-[100px_120px] max-2xl:p-[80px_100px] max-md:p-[40px_20px]">
+
+      <div className="absolute bottom-[-60px] max-md:bottom-[-70px] left-0 z-20">
+        <img
+          src="/images/nutsSack.png"
+          alt="AboutHomeImg"
+          className="w-[260px] max-2xl:w-[200px] max-xl:w-40 "
+        />
+      </div>
+      <div className="col-span-12 relative z-30">
         <motion.h2
-          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading text-center"
+          className="font-heading uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] text-heading text-center"
           variants={heading}
           initial="hidden"
           whileInView="visible"
@@ -46,8 +54,8 @@ const ShopByBenefit = () => {
         >
           Shop by Benefit
         </motion.h2>
-       <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mt-[30px] md:mt-[40px] gap-[30px] md:gap-[40px]"
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mt-[30px] md:mt-10 gap-[30px] md:gap-10"
           variants={list}
           initial="hidden"
           whileInView="visible"
@@ -56,21 +64,21 @@ const ShopByBenefit = () => {
           {featuresData.map((f) => (
             <motion.div
               key={f?.id}
-              className="flex flex-col items-center text-center gap-[12px]"
+              className="flex flex-col items-center text-center gap-3"
               variants={item}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
             >
               <div
-                className={`group flex justify-center items-center bg-[#E1DCC6] hover:bg-[#A75A22] w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
+                className={`group flex justify-center items-center bg-[#E1DCC6] hover:bg-[#ffb643] w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
               >
-                <img 
-                  src={f?.icon} 
-                  alt={f?.title} 
-                  className="w-[45px] h-[45px] object-contain transition-transform duration-500 group-hover:scale-x-[-1]" 
+                <img
+                  src={f?.icon}
+                  alt={f?.title}
+                  className="w-[45px] h-[45px] object-contain transition-transform duration-500 group-hover:scale-x-[-1]"
                 />
               </div>
-              <h6 className="text-[#1C1A05] text-[20px] max-2xl:text-[18px] max-md:text-[16px] font-medium leading-tight">
+              <h6 className="text-[#1C1A05] text-[20px] max-2xl:text-[18px] max-md:text-[16px] font-medium">
                 {f?.title}
               </h6>
             </motion.div>
