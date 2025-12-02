@@ -64,7 +64,7 @@ const OurGallery = () => {
           </motion.h2>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-10">
         {galleryItems.map((item) => (
           <div key={item.id} className="overflow-hidden">
             <img
