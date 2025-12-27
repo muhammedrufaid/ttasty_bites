@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,21 +41,21 @@ const Testimonials = () => {
     // ],
   };
 
-  const sliderRef = useRef<Slider>(null);
+  const contentSliderRef = useRef<Slider>(null);
 
   const next = () => {
-    sliderRef.current?.slickNext();
+    contentSliderRef.current?.slickNext();
   };
 
   const previous = () => {
-    sliderRef.current?.slickPrev();
+    contentSliderRef.current?.slickPrev();
   };
 
   return (
-    <div className=" bg-[#1F1801]  grid grid-cols-12 items-center justify-center p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[80px_20px_40px] gap-2">
-      <div className="col-span-12">
+    <div className="bg-[#1F1801] p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[80px_20px_40px] overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.h2
-          className="font-heading text-[#ffb643]! uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-5 max-lg:mb-2.5 text-heading"
+          className="font-heading text-[#ffb643]! uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-8 lg:mb-12 max-lg:mb-6 text-heading"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -63,103 +63,73 @@ const Testimonials = () => {
         >
           Testimonials
         </motion.h2>
-      </div>
-      <div className="col-span-12 lg:col-span-4 flex items-center justify-center">
-        <img
-          src="/images/preview.jpg"
-          alt="Testimonial"
-          className="w-64 h-64 object-cover"
-        />
-      </div>
-      <div className="col-span-12 lg:col-span-8">
-        <div className="flex items-center gap-4">
-          <BiSolidQuoteAltLeft className="text-4xl text-[#ffb643]" />
-        </div>
-        <div className="h-32 flex items-center justify-center">
-          <p className=" text-lg text-white">
-            Testimonial content would go here
-          </p>
-        </div>
-      </div>
-
-      {/* <div className="flex flex-col gap-20">
-          {testimonialsData.slice(0, 3).map((testimonial, index) => (
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 w-full">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:flex-shrink-0">
             <motion.div
-              key={index}
-              className="flex flex-col gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              style={{
-                marginLeft: `${index * 80}px`, // Each testimonial shifts 80px to the right
-              }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-1 bg-[#E1DCC6] rounded-full">
-                  <img
-                    src="/images/Shop-list-img11.png"
-                    alt={testimonial.author}
-                    className="w-20 h-20 rounded-full object-cover flex-shrink-0"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    "{testimonial.testimonial}"
-                  </p>
-                  <div>
-                    <h3 className="font-bold text-lg text-heading">
-                      {testimonial.author}
-                    </h3>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/images/preview.jpg"
+                alt="Testimonial"
+                className="w-full max-w-[280px] h-[280px] lg:w-[280px] lg:h-[280px] object-cover rounded-lg shadow-lg"
+              />
             </motion.div>
-          ))}
-        </div> */}
-
-      {/* <div className="col-span-8 w-full">
-            <Slider ref={sliderRef} {...settings}>
+          </div>
+          <div className="flex-1 w-full min-w-0 overflow-hidden">
+            <Slider 
+              ref={contentSliderRef} 
+              {...settings} 
+              className="w-full"
+            >
               {testimonialsData.map((item) => (
-                <motion.div
-                  key={item?.id}
-                  className="flex flex-col items-center w-full"
-                  initial={{ opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.45, ease: "easeOut" }}
-                >
-                  <p className="text-[18px] max-2xl:text-[16px] max-md:text-[14px] text-[#E8E8E8] text-center">
-                    {item?.testimonial}
-                  </p>
-                  <div className="flex justify-center my-[30px] max-md:my-[20]">
-                    <img
-                      src="/images/Shop-list-img11.png"
-                      alt="Client"
-                      className="rounded-full w-[100px] aspect-square"
-                    />
+                <div key={item?.id} className="flex flex-col gap-6 px-2 lg:px-4 w-full">
+                  <div className="flex items-start gap-4">
+                    <BiSolidQuoteAltLeft className="text-4xl lg:text-5xl text-[#ffb643] flex-shrink-0 mt-1" />
                   </div>
-                  <p className="text-[18px] max-2xl:text-[16px] max-md:text-[14px] text-white text-center">
-                    {item?.author}
-                  </p>
-                  <div></div>
-                </motion.div>
+                  <div className="min-h-[120px] lg:min-h-[140px] flex items-start pt-2">
+                    <p className="text-[18px] max-2xl:text-[16px] max-md:text-[15px] text-white leading-relaxed break-words">
+                      {item?.testimonial}
+                    </p>
+                  </div>
+                  <div className="pt-2">
+                    <p className="text-[18px] max-2xl:text-[16px] max-md:text-[15px] text-[#ffb643] font-semibold">
+                      {item?.author}
+                    </p>
+                  </div>
+                </div>
               ))}
             </Slider>
-          </div> */}
-
-      {/* <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <img
-            src="/images/Shop-list-img11.png"
-            alt="QoutesIcon"
-            className="w-[40px] h-[40px]"
-          />
-        </motion.div>  */}
+            {/* <div className="flex items-center gap-4 mt-6 lg:mt-8">
+              <button
+                onClick={previous}
+                className="p-2 rounded-full hover:bg-[#ffb643]/20 transition-colors"
+                aria-label="Previous testimonial"
+              >
+                <ArrowIcon
+                  className="w-6 h-6 rotate-180"
+                  color="text-[#ffb643]"
+                  stroke={2}
+                />
+              </button>
+              <button
+                onClick={next}
+                className="p-2 rounded-full hover:bg-[#ffb643]/20 transition-colors"
+                aria-label="Next testimonial"
+              >
+                <ArrowIcon
+                  className="w-6 h-6"
+                  color="text-[#ffb643]"
+                  stroke={2}
+                />
+              </button>
+            </div> */}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
