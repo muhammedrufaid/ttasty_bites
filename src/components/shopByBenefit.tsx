@@ -35,7 +35,7 @@ const ShopByBenefit = () => {
   //     },
   //   };
   return (
-    <div className="relative bg-[#EBE8D4] grid grid-cols-12 items-center justify-center p-[100px_120px] max-2xl:p-[80px_100px] max-md:p-[40px_20px]">
+    <div className="relative bg-[#1F1801] grid grid-cols-12 items-center justify-center p-[100px_120px] max-2xl:p-[80px_100px] max-md:p-[40px_20px]">
 
       <div className="absolute bottom-[-60px] max-md:bottom-[-70px] left-0 z-20">
         <img
@@ -52,7 +52,7 @@ const ShopByBenefit = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          Shop by Benefit
+          <span className="text-white">Shop by </span><span className="text-[#ffb643]">Benefit</span>
         </motion.h2>
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mt-[30px] md:mt-10 gap-[30px] md:gap-10"
@@ -70,7 +70,7 @@ const ShopByBenefit = () => {
               transition={{ duration: 0.2 }}
             >
               <div
-                className={`group flex justify-center items-center bg-[#E1DCC6] hover:bg-[#ffb643] w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
+                className={`group flex justify-center items-center bg-[#ffb643] hover:bg-white w-[75px] h-[75px] rounded-[18px] transition-colors duration-300`}
               >
                 <img
                   src={f?.icon}
@@ -78,7 +78,7 @@ const ShopByBenefit = () => {
                   className="w-[45px] h-[45px] object-contain transition-transform duration-500 group-hover:scale-x-[-1]"
                 />
               </div>
-              <h6 className="text-[#1C1A05] text-[20px] max-2xl:text-[18px] max-md:text-[16px] font-medium">
+              <h6 className="text-white text-[20px] max-2xl:text-[18px] max-md:text-[16px] font-medium">
                 {f?.title}
               </h6>
             </motion.div>

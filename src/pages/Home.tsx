@@ -13,16 +13,8 @@ const Home = () => {
       <WhoWeAre />
       <ShopByBenefit />
       <OurGallery />
-
-
-      <div className="p-[60px_120px] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
-        <OurProducts />
-      </div>
-
-      {/* testimonials */}
-      <div className="p-[60px_120px] bg-[#EBE8D4] max-2xl:p-[60px_100px] max-md:p-[40px_20px]">
-        <Testimonials />
-      </div>
+      <OurProducts />
+      <Testimonials />
 
       <div className="p-[60px_120px] max-2xl:p-[0px_100px] max-md:p-[40px_20px]">
         <NewsLetterSection />

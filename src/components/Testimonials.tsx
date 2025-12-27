@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { testimonialsData } from "../utils/data";
 import { motion } from "framer-motion";
 import { ArrowIcon } from "./Icons";
+import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 const Testimonials = () => {
   const settings = {
@@ -51,10 +52,10 @@ const Testimonials = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center gap-[30px]">
-      <div className="flex flex-col bgTestimonials gap-[40px] w-full">
+    <div className=" bg-[#1F1801]  grid grid-cols-12 items-center justify-center p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[80px_20px_40px] gap-2">
+      <div className="col-span-12">
         <motion.h2
-          className="font-heading uppercase font-bold text-[40px] md:text-[48px] leading-[40px] text-heading"
+          className="font-heading text-[#ffb643]! uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-5 max-lg:mb-2.5 text-heading"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -62,10 +63,26 @@ const Testimonials = () => {
         >
           Testimonials
         </motion.h2>
+      </div>
+      <div className="col-span-12 lg:col-span-4 flex items-center justify-center">
+        <img
+          src="/images/preview.jpg"
+          alt="Testimonial"
+          className="w-64 h-64 object-cover"
+        />
+      </div>
+      <div className="col-span-12 lg:col-span-8">
+        <div className="flex items-center gap-4">
+          <BiSolidQuoteAltLeft className="text-4xl text-[#ffb643]" />
+        </div>
+        <div className="h-32 flex items-center justify-center">
+          <p className=" text-lg text-white">
+            Testimonial content would go here
+          </p>
+        </div>
+      </div>
 
-        
-
-        {/* <div className="flex flex-col gap-20">
+      {/* <div className="flex flex-col gap-20">
           {testimonialsData.slice(0, 3).map((testimonial, index) => (
             <motion.div
               key={index}
@@ -101,7 +118,7 @@ const Testimonials = () => {
           ))}
         </div> */}
 
-        {/* <div className="col-span-8 w-full">
+      {/* <div className="col-span-8 w-full">
             <Slider ref={sliderRef} {...settings}>
               {testimonialsData.map((item) => (
                 <motion.div
@@ -131,7 +148,7 @@ const Testimonials = () => {
             </Slider>
           </div> */}
 
-        {/* <motion.div
+      {/* <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -143,7 +160,6 @@ const Testimonials = () => {
             className="w-[40px] h-[40px]"
           />
         </motion.div>  */}
-      </div>
     </div>
   );
 };
