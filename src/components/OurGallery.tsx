@@ -49,6 +49,49 @@ const heading = {
   },
 };
 
+// Different animation variants for each gallery item (from OurProducts)
+const galleryVariants = [
+  {
+    hidden: { opacity: 0, x: -50, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut" as const,
+        delay: 0.2,
+      },
+    },
+  },
+  {
+    hidden: { opacity: 0, y: 50, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut" as const,
+        delay: 0.4,
+      },
+    },
+  },
+  {
+    hidden: { opacity: 0, x: 50, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut" as const,
+        delay: 0.6,
+      },
+    },
+  },
+];
+
 const OurGallery = () => {
   return (
     <React.Fragment>
@@ -64,17 +107,28 @@ const OurGallery = () => {
             Our Gallery
           </motion.h2>
         </div>
-       
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-10"> */}
-        {galleryItems.map((item) => (
-          <div key={item.id} className="overflow-hidden col-span-4 max-xl:col-span-6 max-md:col-span-12 aspect-12/8">
-            <img
-              src={item.imageUrl}
-              alt={item.altText}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        ))}
+        <div className="col-span-12 grid grid-cols-12 gap-2 mt-10">
+          {galleryItems.map((item, index) => {
+            // Cycle through the three animation variants
+            const variant = galleryVariants[index % galleryVariants.length];
+            return (
+              <motion.div
+                key={item.id}
+                className="overflow-hidden col-span-4 max-xl:col-span-6 max-md:col-span-12 aspect-12/8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={variant}
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.altText}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </React.Fragment>
   );
