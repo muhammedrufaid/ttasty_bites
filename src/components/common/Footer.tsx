@@ -132,23 +132,23 @@ const Footer: React.FC = () => {
         </motion.div> */}
       </motion.div>
 
-      <div className="w-full bg-[#1F1801] flex justify-center items-center p-[20px] border-t border-[rgba(255,255,255,0.50)]">
+      <div className="w-full bg-[#1F1801] flex justify-center items-center p-5 border-t border-[rgba(255,255,255,0.50)]">
         <p className="text-[18px] max-2xl:text-[16px] max-md:text-[14px] text-white max-w-[400px]">
           2025 all rights reserved.
         </p>
       </div>
 
       {whatsappLink && (
-        <div className="fixed bottom-[24px] right-[24px] z-50">
+        <div className="fixed bottom-6 right-6 z-50">
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp quick chat"
-            className="group inline-flex items-center animate-bounce justify-center w-[70px] h-[70px] max-md:w-[56px] max-md:h-[56px] rounded-full bg-[#25D366] shadow-lg shadow-black/20 ring-1 ring-black/10 hover:scale-105 transition-transform"
+            className="group inline-flex items-center animate-bounce justify-center w-[70px] h-[70px] max-md:w-14 max-md:h-14 rounded-full bg-[#25D366] shadow-lg shadow-black/20 ring-1 ring-black/10 hover:scale-105 transition-transform"
           >
             <WhatsappIcon
-              className="w-[40px] h-[40px] max-md:w-[30px] max-md:h-[30px] stroke-white"
+              className="w-10 h-10 max-md:w-[30px] max-md:h-[30px] stroke-white"
               stroke={1.5}
             />
           </a>

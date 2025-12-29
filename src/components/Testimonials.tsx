@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonialsData } from "../utils/data";
 import { motion } from "framer-motion";
-import { ArrowIcon } from "./Icons";
+// import { ArrowIcon } from "./Icons";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 const Testimonials = () => {
@@ -43,19 +43,19 @@ const Testimonials = () => {
 
   const contentSliderRef = useRef<Slider>(null);
 
-  const next = () => {
-    contentSliderRef.current?.slickNext();
-  };
+  // const next = () => {
+  //   contentSliderRef.current?.slickNext();
+  // };
 
-  const previous = () => {
-    contentSliderRef.current?.slickPrev();
-  };
+  // const previous = () => {
+  //   contentSliderRef.current?.slickPrev();
+  // };
 
   return (
     <div className="bg-[#1F1801] p-[80px_120px] max-2xl:p-[60px_100px] max-md:p-[80px_20px_40px] overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <motion.h2
-          className="font-heading text-[#ffb643]! uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-8 lg:mb-12 max-lg:mb-6 text-heading"
+          className="font-heading text-[#ffb643]! uppercase font-bold text-[40px] max-xl:text-[32px] max-lg:text-[22px] mb-8 lg:mb-12 max-lg:mb-6"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -64,7 +64,7 @@ const Testimonials = () => {
           Testimonials
         </motion.h2>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 w-full">
-          <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:flex-shrink-0">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-start lg:shrink-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -88,10 +88,10 @@ const Testimonials = () => {
               {testimonialsData.map((item) => (
                 <div key={item?.id} className="flex flex-col gap-6 px-2 lg:px-4 w-full">
                   <div className="flex items-start gap-4">
-                    <BiSolidQuoteAltLeft className="text-4xl lg:text-5xl text-[#ffb643] flex-shrink-0 mt-1" />
+                    <BiSolidQuoteAltLeft className="text-4xl lg:text-5xl text-[#ffb643] shrink-0 mt-1" />
                   </div>
                   <div className="min-h-[120px] lg:min-h-[140px] flex items-start pt-2">
-                    <p className="text-[18px] max-2xl:text-[16px] max-md:text-[15px] text-white leading-relaxed break-words">
+                    <p className="text-[18px] max-2xl:text-[16px] max-md:text-[15px] text-white leading-relaxed wrap-break-word">
                       {item?.testimonial}
                     </p>
                   </div>

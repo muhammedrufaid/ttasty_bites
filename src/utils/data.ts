@@ -1,10 +1,10 @@
-import DailyUseIcon from '/public/images/shopByBenefit/DailyUse.png';
-import DigestiveIcon from '/public/images/shopByBenefit/Digestive.png';
-import HeartHealthIcon from '/public/images/shopByBenefit/heart-health.png';
-import EnergyBoostIcon from '/public/images/shopByBenefit/energyBoost.png';
-import ImmunityBoostIcon from '/public/images/shopByBenefit/immunityBoost.png';
-import RespiratoryHealthIcon from '/public/images/shopByBenefit/respiratory-health.png';
-import SkinHealthIcon from '/public/images/shopByBenefit/skinhealth.png';
+import DailyUseIcon from '/images/shopByBenefit/DailyUse.png';
+import DigestiveIcon from '/images/shopByBenefit/Digestive.png';
+import HeartHealthIcon from '/images/shopByBenefit/heart-health.png';
+import EnergyBoostIcon from '/images/shopByBenefit/energyBoost.png';
+import ImmunityBoostIcon from '/images/shopByBenefit/immunityBoost.png';
+import RespiratoryHealthIcon from '/images/shopByBenefit/respiratory-health.png';
+import SkinHealthIcon from '/images/shopByBenefit/skinhealth.png';
 
 
 export const testimonialsData = [
